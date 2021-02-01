@@ -4,9 +4,9 @@ open Expect
 open! TestUtil.ExpectExtra
 
 describe("OptionExtra", () =>
-  describe("take", () =>
+  describe("or", () =>
     testAll(
-      "take n elements from xs",
+      "take the first populated value",
       [
         (None, None, None),
         (Some(1), None, Some(1)),
