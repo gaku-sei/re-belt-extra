@@ -58,7 +58,7 @@ assert (\"foo\"->charAt(10) == None)
 ```
 ")
 let charAt = (str, position) =>
-  if position < str->Js.String2.length || position >= 0 {
+  if position < str->Js.String2.length && position >= 0 {
     Some(Js.String2.charAt(str, position))
   } else {
     None
