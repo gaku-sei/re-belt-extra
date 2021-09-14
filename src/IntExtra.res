@@ -15,6 +15,6 @@ let fromString = str =>
   switch str->Int.fromString {
   | None => None
   // This checks the strings that start with a number but still containing characters are not parsed
-  | Some(x) when x->Int.toString->Js.String2.length != str->Js.String2.length => None
+  | Some(x) if x->Int.toString->Js.String2.length != str->Js.String2.length => None
   | Some(x) => Some(x)
   }
