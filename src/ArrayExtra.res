@@ -82,8 +82,8 @@ assert ([1, 2, 3, 4]->drop(4) == [])
 ")
 let drop = (xs, n) =>
   switch n {
-  | _ when n <= 0 => xs
-  | _ when n > Js.Array2.length(xs) => []
+  | _ if n <= 0 => xs
+  | _ if n > Js.Array2.length(xs) => []
   | _ => Js.Array2.slice(xs, ~start=n, ~end_=Js.Array2.length(xs))
   }
 
